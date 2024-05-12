@@ -11,9 +11,9 @@ services:
       - node_modules:/usr/local/src/marp-builder-api/node_modules
       - ./attachment:/attachment
     ports:
-      - 8080:80
+      - 3000:3000
     environment:
-      PORT: "80"
+      PORT: "3000"
 
 volumes:
   node_modules:
