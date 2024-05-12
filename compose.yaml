@@ -1,0 +1,20 @@
+version: '3'
+services:
+  marp-builder-api:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+      target: development
+    env_file: ./marp-builder-api/.env
+    volumes:
+      - ./marp-builder-api:/usr/local/src/marp-builder-api
+      - node_modules:/usr/local/src/marp-builder-api/node_modules
+      - ./attachment:/attachment
+    ports:
+      - 3000:3000
+    environment:
+      PORT: "3000"
+
+volumes:
+  node_modules:
+    driver: local

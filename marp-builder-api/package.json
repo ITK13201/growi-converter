@@ -1,0 +1,31 @@
+{
+  "name": "marp-builder-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "ts-node ./bin/www.ts",
+    "dev": "ts-node-dev --respawn ./bin/www.ts"
+  },
+  "dependencies": {
+    "@marp-team/marp-core": "^3.9.0",
+    "axios": "^1.6.8",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "http-status-codes": "^2.3.0",
+    "morgan": "~1.9.1",
+    "ts-dedent": "^2.2.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/debug": "^4.1.12",
+    "@types/express": "^4.17.21",
+    "@types/http-errors": "^2.0.4",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.12.11"
+  }
+}
