@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 
-app.use('/attachment', express.static('/attachment'));
+app.use('/attachment', express.static('/attachment', {extensions: ["png", "jpg", "jpeg", "gif", "svg"]}));
 
 app.use('/', indexRouter);
 app.use('/growi', growiRouter);
