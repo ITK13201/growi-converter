@@ -6,6 +6,7 @@ import HttpStatus from 'http-status-codes';
 
 import indexRouter from './routes/index';
 import growiRouter from './routes/growi';
+import attachmentRouter from "./routes/attachment";
 import {Response} from "./models/response";
 
 const app: express.Express = express();
@@ -15,10 +16,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 
-app.use('/attachment', express.static('/attachment', {extensions: ["png", "jpg", "jpeg", "gif", "svg"]}));
-
 app.use('/', indexRouter);
 app.use('/growi', growiRouter);
+app.use('/attachment', attachmentRouter);
 
 // catch 404 and forward to error handler
 app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
