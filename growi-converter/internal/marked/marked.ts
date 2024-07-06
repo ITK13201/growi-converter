@@ -1,6 +1,4 @@
 import {Marked} from "marked";
-import dedent from "ts-dedent";
-import {Config} from "../../config/config";
 import markedKatex from "marked-katex-extension";
 
 export class MarkedUtil {
