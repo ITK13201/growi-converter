@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 jobs:
-  marp-builder-api:
+  growi-converter:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/itk13201/marp-builder-api
+          images: ghcr.io/itk13201/growi-converter
       - name: Login to ghcr.io registry
         uses: docker/login-action@v3
         with:

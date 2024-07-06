@@ -1,17 +1,17 @@
 import express from "express"
 import HttpStatus from "http-status-codes";
-import {GrowiController} from "../controllers/growi_controller";
 import {GrowiAttachmentNotFoundError} from "../internal/growi/growi";
 import {Response} from "../models/response"
+import {AttachmentController} from "../controllers/attachment_controller";
 
 const router: express.Router = express.Router();
 
 router.get('/:attachment_id', async (req: express.Request, res: express.Response, next: express.NextFunction) => {
     const {attachment_id} = req.params;
-    const growiController = new GrowiController();
+    const controller = new AttachmentController();
 
     try {
-        const buffer = await growiController.getAttachment(attachment_id)
+        const buffer = await controller.loadAttachment(attachment_id)
         res.header("Content-Type", "application/octet-stream");
         res.status(HttpStatus.OK).send(buffer)
         return

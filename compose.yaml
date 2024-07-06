@@ -1,14 +1,14 @@
 version: '3'
 services:
-  marp-builder-api:
+  growi-converter:
     build:
       dockerfile: ./Dockerfile
       context: .
       target: development
-    env_file: ./marp-builder-api/.env
+    env_file: growi-converter/.env
     volumes:
-      - ./marp-builder-api:/usr/local/src/marp-builder-api
-      - node_modules:/usr/local/src/marp-builder-api/node_modules
+      - ./growi-converter:/usr/local/src/growi-converter
+      - node_modules:/usr/local/src/growi-converter/node_modules
       - ./attachment:/attachment
     ports:
       - 3000:3000

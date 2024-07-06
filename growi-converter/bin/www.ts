@@ -8,7 +8,7 @@ import app from '../app';
 import debug from 'debug';
 import http from 'http'
 
-const debugLogger = debug('marp-builder-api:server');
+const debugLogger = debug('growi-converter:server');
 
 /**
  * Get port from environment and store in Express.

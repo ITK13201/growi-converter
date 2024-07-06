@@ -5,7 +5,7 @@ import logger from 'morgan';
 import HttpStatus from 'http-status-codes';
 
 import indexRouter from './routes/index';
-import growiRouter from './routes/growi';
+import marpRouter from './routes/marp';
 import attachmentRouter from "./routes/attachment";
 import {Response} from "./models/response";
 
@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
-app.use('/growi', growiRouter);
+app.use('/marp', marpRouter);
 app.use('/attachment', attachmentRouter);
 
 // catch 404 and forward to error handler

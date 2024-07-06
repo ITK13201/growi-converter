@@ -1,8 +1,8 @@
 import express from "express"
 import HttpStatus from "http-status-codes";
-import {GrowiController} from "../controllers/growi_controller";
 import {GrowiPageNotFoundError} from "../internal/growi/growi";
 import {Response} from "../models/response"
+import {MarpController} from "../controllers/marp_controller";
 
 const router: express.Router = express.Router();
 
@@ -12,10 +12,10 @@ router.get("/", (req: express.Request, res: express.Response, next: express.Next
 
 router.get('/:page_id', async (req: express.Request, res: express.Response, next: express.NextFunction) => {
     const {page_id} = req.params;
-    const growiController = new GrowiController();
+    const controller = new MarpController();
 
     try {
-        const html = await growiController.buildPDF(page_id)
+        const html = await controller.buildHTML(page_id)
         res.status(HttpStatus.OK).send(html)
         return
     } catch (e: unknown) {

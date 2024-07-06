@@ -3,7 +3,7 @@ ARG node_version=22-bookworm
 # Development environment
 FROM node:${node_version} AS development
 
-ARG APP=marp-builder-api
+ARG APP=growi-converter
 
 WORKDIR /usr/local/src/${APP}
 
@@ -25,7 +25,7 @@ ENTRYPOINT ["yarn", "dev"]
 # Production environment
 FROM node:${node_version} AS production
 
-ARG APP=marp-builder-api
+ARG APP=growi-converter
 
 WORKDIR /usr/local/src/${APP}
 
