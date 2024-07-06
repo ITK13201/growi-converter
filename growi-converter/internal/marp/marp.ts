@@ -10,10 +10,14 @@ export class MarpUtil {
         const {html, css} = marp.render(content)
         const htmlFile = dedent`
             <!DOCTYPE html>
-            <html><body>
-              <style>${css}</style>
-              ${html}
-            </body></html>
+            <html>
+            <body>
+                <style>${css}</style>
+                <div>
+                    ${html}
+                </div>
+            </body>
+            </html>
         `
         return htmlFile
     }

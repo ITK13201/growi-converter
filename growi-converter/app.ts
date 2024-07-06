@@ -6,6 +6,7 @@ import HttpStatus from 'http-status-codes';
 
 import indexRouter from './routes/index';
 import marpRouter from './routes/marp';
+import markedRouter from './routes/marked';
 import attachmentRouter from "./routes/attachment";
 import {Response} from "./models/response";
 
@@ -15,9 +16,11 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
+app.use(express.static('public'))
 
 app.use('/', indexRouter);
 app.use('/marp', marpRouter);
+app.use("/marked", markedRouter)
 app.use('/attachment', attachmentRouter);
 
 // catch 404 and forward to error handler
