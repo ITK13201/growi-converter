@@ -133,6 +133,11 @@
   resolved "https://registry.yarnpkg.com/@types/http-errors/-/http-errors-2.0.4.tgz#7eb47726c391b7345a6ec35ad7f4de469cf5ba4f"
   integrity sha512-D0CFMMtydbJAegzOyHjtiKPLlvnm3iTZyZRSZoLq2mRhDdmLfIWOCYPfQJ4cu2erKghU++QvjcUjp/5h7hESpA==
 
+"@types/katex@^0.16.7":
+  version "0.16.7"
+  resolved "https://registry.yarnpkg.com/@types/katex/-/katex-0.16.7.tgz#03ab680ab4fa4fbc6cb46ecf987ecad5d8019868"
+  integrity sha512-HMwFiRujE5PjrgwHQ25+bsLJgowjGjm5Z8FVSf0N6PwgJrwxH0QxzHYDcKsTfV3wva0vzrpqMTJS2jXPr5BMEQ==
+
 "@types/mime@^1":
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-1.3.5.tgz#1ef302e01cf7d2b5a0fa526790c9123bf1d06690"
@@ -804,6 +809,13 @@ markdown-it@^13.0.2:
     linkify-it "^4.0.1"
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
+
+marked-katex-extension@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/marked-katex-extension/-/marked-katex-extension-5.0.2.tgz#bc534ff082df425ac6d468e782f373b8825fcf03"
+  integrity sha512-K8Zq0a1Hvs/3i67ZkealrS0IxGiBOnrYeQmn2lAT34uvMcI+BtwdM35qOWCDIpgyBCABYppIQL605ggo+aQUuQ==
+  dependencies:
+    "@types/katex" "^0.16.7"
 
 marked@^13.0.2:
   version "13.0.2"

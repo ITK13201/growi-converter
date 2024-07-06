@@ -24,14 +24,10 @@ type growiConfig = {
     Endpoints: growiEndpointsConfig
 }
 
-type markedConfig = {
-    CSSPath: string
-}
 
 type config = {
     Port: string
     Growi: growiConfig
-    Marked: markedConfig
 }
 
 export const Config: config = {
@@ -45,7 +41,4 @@ export const Config: config = {
             GetAttachment: "/_api/v3/attachment"
         }
     },
-    Marked: {
-        CSSPath: "/css/github-markdown-light.css"
-    }
 }
